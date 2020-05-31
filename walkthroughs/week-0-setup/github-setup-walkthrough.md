@@ -145,7 +145,7 @@ file.
 
 This file contains the content that shows in your repo's GitHub page.
 Change it to say "This repo contains [your name]'s portfolio and
-SPS projects."
+SPS projects."<walkthrough-editor-open-file filePath="software-product-sprint/README.md">README.md</walkthrough-editor-open-file>
 
 The `README.md` file now belongs to you. You should feel free to customize it
 and make it your own!
