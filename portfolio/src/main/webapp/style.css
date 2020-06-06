@@ -1,9 +1,36 @@
 #content {
   margin-left: auto;
   margin-right: auto;
-  width: 650px;
+  width: 90%;
 }
 
 #greeting-container {
   margin-top: 20px;
+}
+
+#cycleimage {
+    display: flex;
+}
+
+#navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+#avatar {
+    display: inline;
+}
+#navlist a {
+  display: block;
+  color: white;
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
 }
