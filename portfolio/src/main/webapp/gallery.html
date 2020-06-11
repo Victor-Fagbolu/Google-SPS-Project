@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="content">
+        <div>
+            <ul id="navbar">
+                <li id="navlist"><a href="index.html">Home</a></li>
+                <li id="navlist"><a href="aboutme.html">About Me</a></li>
+                <li id="navlist"><a href="gallery.html">Gallery</a></li>
+                <li id="navlist"><a href="blogs.html">Blogs</a></li>
+            </ul>
+        </div>
+        <div> <h1>Gallery</h1> </div>
+        <div>
+            <h2>ME!</h2>
+            <div id="cycleimage">
+                <button class="btn btn-primary" onclick="cycleMe('+')">Prev</button>
+                <div id="meContainer"> <img height=400 width=300 src="./images/me1.jpg"/></div>
+                <button class="btn btn-primary" onclick="cycleMe('-')">Next</button>
+            </div>
+        </div>
+        <div>
+            <h2>Places I've been (not many lol)</h2>
+            <div id="cycleimage">
+                <button class="btn btn-primary" onclick="cyclePlace('+')">Prev</button>
+                <div id="placeContainer"><img height=400 width=300 src="./images/place1.jpg"/></div>
+                <button class="btn btn-primary" onclick="cyclePlace('-')">Next</button>
+            </div>
+        </div>
+        <div>
+            <h2>Movies</h2>
+            <div id="cycleimage">
+                <button class="btn btn-primary" onclick="cycleMovie('+')">Prev</button>
+                <div id="movieContainer"><img height=400 width=300 src="./images/movie1.jpg"/></div>
+                <button class="btn btn-primary" onclick="cycleMovie('-')">Next</button>
+            </div>
+        </div>
+        <div>
+            <h2>Shows</h2>
+            <div id="cycleimage">
+                <button class="btn btn-primary" onclick="cycleShow('+')">Prev</button>
+                <div id="showContainer"><img height=400 width=300 src="./images/show1.jpg"/></div>
+                <button class="btn btn-primary" onclick="cycleShow('-')">Next</button>
+            </div>
+        </div>
+        <div>
+            <h2>Soccer Players</h2>
+            <div id="cycleimage">
+                <button class="btn btn-primary" onclick="cyclePlayer('+')">Prev</button>
+                <div id="playerContainer"><img height=400 width=300 src="./images/player1.jpg"/></div>
+                <button class="btn btn-primary" onclick="cyclePlayer('-')">Next</button>
+            </div>
+        </div>
+        <div>
+            <h2>Anime</h2>
+            <div id="cycleimage">
+                <button class="btn btn-primary" onclick="cycleAnime('+')">Prev</button>
+                <div id="animeContainer"><img height=400 width=300 src="./images/anime1.jpg"/></div>
+                <button class="btn btn-primary" onclick="cycleAnime('-')">Next</button>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
