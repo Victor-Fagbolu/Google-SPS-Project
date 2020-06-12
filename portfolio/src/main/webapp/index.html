@@ -46,12 +46,20 @@
             </ul>
         </div>
         <div>
-            <form action="/data" method="POST">
-                <input type="text" name="name">Enter Name</input>
-                <textarea name="comment" ></textarea>
-                <input type="submit">Submit</input>
-            </form>
-            <div id="commentSection"></div>
+            <div>
+                <h2>Comments</h2>
+                <div id="commentContainter">
+                    <form action="/data" method="POST">
+                        <div id="commentAtteributes">
+                            <input type="text" name="name" required placeholder="Name"></input>
+                        </div>
+                        <textarea id="commentText"name="comment" required placeholder="Express Yourself"></textarea>
+                        <input id="submitButton" class="btn btn-primary" type="submit"></input>
+                    </form>
+                </div>
+                <div id="commentSection"></div>
+            </div>
+            
         </div>
     </div>
   </body>

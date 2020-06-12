@@ -1,3 +1,18 @@
+#commentContainter {
+    background-color: gainsboro;
+}
+
+#commentAtteributes {
+    
+}
+
+#commentText {
+    width: 400;
+}
+#submitButton {
+    display: block;
+}
+
 #content {
   margin-left: auto;
   margin-right: auto;

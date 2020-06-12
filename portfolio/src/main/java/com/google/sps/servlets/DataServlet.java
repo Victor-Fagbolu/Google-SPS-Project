@@ -17,6 +17,9 @@ package com.google.sps.servlets;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.PreparedQuery;
+import com.google.appengine.api.datastore.Query;
+import com.google.appengine.api.datastore.Query.SortDirection;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -35,13 +38,34 @@ public final class DataServlet extends HttpServlet {
   public void init() {
     comments = new ArrayList<>();
   }
+
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    String jsonData = convertToJSON(comments);
+    Query query = new Query("Comment");
 
+    DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+    PreparedQuery results = datastore.prepare(query);
+
+    List<List<String>> Entries = new ArrayList<>();
+    for (Entity entity : results.asIterable()) {
+      long id = entity.getKey().getId();
+      String name = (String) entity.getProperty("name");
+      String comment = (String) entity.getProperty("Comment");
+
+      List<String> entry = new ArrayList<>();
+      entry.add(name);
+      entry.add(comment);
+      Entries.add(entry);
+    }
+
+    Gson gson = new Gson();
     response.setContentType("application/json;");
-    response.getWriter().println(jsonData);
+    response.getWriter().println(gson.toJson(Entries));
   }
+
+
+
+
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     String name = getParam(request, "name", "Anonomous");
     String comment = getParam(request, "comment", "No Comment");
@@ -50,7 +74,7 @@ public final class DataServlet extends HttpServlet {
     entry.add(comment);
     comments.add(entry);
 
-    Entity commentEntity = new Entity("Task");
+    Entity commentEntity = new Entity("Comment");
     commentEntity.setProperty("name", name);
     commentEntity.setProperty("Comment", comment);
 
@@ -59,12 +83,6 @@ public final class DataServlet extends HttpServlet {
 
     // Redirect back to the HTML page.
     response.sendRedirect("/index.html");
-  }
-
-  private String convertToJSON(List list) {
-    Gson gson = new Gson();
-    String json = gson.toJson(list);
-    return json;
   }
 
   private String getParam(HttpServletRequest request, String name, String defaultVal){
