@@ -9,7 +9,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
   </head>
-  <body>
+  <body onload="getComments()">
     <div id="content">
         <div>
             <ul id="navbar">
@@ -44,6 +44,22 @@
                 <li><a href="https://github.com/Victor-Fagbolu">My GitHub</a></li>
                 <li><a href="blogs.html">My Blogs</a></li>
             </ul>
+        </div>
+        <div>
+            <div>
+                <h2>Comments</h2>
+                <div id="commentContainter">
+                    <form action="/data" method="POST">
+                        <div id="commentAtteributes">
+                            <input type="text" name="name" required placeholder="Name"></input>
+                        </div>
+                        <textarea id="commentText"name="comment" required placeholder="Express Yourself"></textarea>
+                        <input id="submitButton" class="btn btn-primary" type="submit"></input>
+                    </form>
+                </div>
+                <div id="commentSection"></div>
+            </div>
+            
         </div>
     </div>
   </body>
