@@ -1,6 +1,25 @@
 function test() {
     console.log("HI")
 }
+
+function getComments() {
+    fetch("/data").then((response) => response.json()).then((comments) => {
+        const commentList = document.createElement('ul')
+        comments.forEach(comment => {
+            const entry = createListElement(comment);
+            commentList.appendChild(entry)
+        })
+        const commentSection = document.getElementById("commentSection");
+        commentSection.innerHTML = ''
+        commentSection.appendChild(commentList)
+    })
+}
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}
+
 me = { index: 1}
 place = { index: 1}
 movie = { index: 1}
