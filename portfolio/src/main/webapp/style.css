@@ -1,16 +1,37 @@
 #commentContainter {
-    background-color: gainsboro;
+    position: relative;
+    display: grid;
+    grid-template-columns: 80px minmax(100px,1fr) 160px;
+    grid-gap: 2rem;
+    background: #383838;
+    color: #c2c2c2;
+    box-shadow: 0 4px 80px #070509;
+    padding: 2rem;
+    border-radius: 16px;
 }
 
 #commentAtteributes {
-    
+    position: relative;
+    grid-template-columns: 80px minmax(100px,1fr) 160px;
+    grid-gap: 2rem;
+    background: #383838;
+    color: #c2c2c2;
+    padding: 3rem;
+    border-radius: 16px;
 }
 
 #commentText {
-    width: 400;
+    position: relative;
+    grid-template-columns: 80px minmax(100px,1fr) 160px;
+    grid-gap: 2rem;
+    background: #383838;
+    color: #c2c2c2;
+    padding: 3rem;
+    border-radius: 16px;
 }
 #submitButton {
     display: block;
+    box-shadow: #2f5272;
 }
 
 #content {
