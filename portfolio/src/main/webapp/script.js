@@ -1,41 +1,47 @@
 function test() {
     console.log("HI")
 }
+function getentry() {
 
+}
 function getComments() {
     fetch("/data").then((response) => response.json()).then((comments) => {
         const commentList = document.createElement('ul')
         comments.map(C => {
-            <div class="card">
-                <h5 class="card-header">Featured</h5>
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                </div>
-            </div>
-
+            const name = C.name
+            const com = C.comment
+            const time = C.currentTime
+            
             //Creating Div
-            const card = document.createElement('card')
-            card.className('card')
-            const header = document.createElement('card-header')
-            header.className('card-header')
-            const body = document.createElement('card-body')
-            body.className('card-body')
-            const text = document.createElement('card-text')
-            text.className('card-text')
+            const card = document.createElement('div')
+            card.setAttribute("class","card")
+            card.setAttribute("id","card")
+
+            const header = document.createElement('h2')
+            header.setAttribute("class","badge badge-secondary")
+            header.innerHTML=name
+
+            const body = document.createElement('div')
+            body.setAttribute("class","card-body")
+
+            const text = document.createElement('h3')
+            text.setAttribute("class","card-text")
+            text.innerHTML = com
+
+            const Currtime = document.createElement('h6')
+            Currtime.setAttribute("class","card-time")
+            Currtime.innerHTML = time
 
             console.log(card)
 
             //Connecting Child
             card.appendChild(header)
-            body.appendChild(title)
             body.appendChild(text)
+            body.appendChild(Currtime)
             card.appendChild(body)
             
-            const name = C.name
-            const com = C.comment
-            const likes = C.likes
-            const entry = createListElement(com);
+            console.log(card)
+            const entry = createListElement(card);
             commentList.appendChild(card)
         })
         const commentSection = document.getElementById("commentSection");

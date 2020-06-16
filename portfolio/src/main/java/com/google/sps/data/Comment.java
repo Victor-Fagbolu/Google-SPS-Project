@@ -13,17 +13,21 @@
 // limitations under the License.
 
 package com.google.sps.data;
+import java.util.Date;
 
 /** An item on a todo list. */
 public final class Comment {
 
   private final String name;
   private final String comment;
-  private final int likes;
+  private final Date currentTime;
 
-  public Comment(String name, String comment, int likes) {
+  public Comment(String name, String comment, Date currentTime) {
     this.name = name;
     this.comment = comment;
-    this.likes = likes;
+    this.currentTime = currentTime;
+  }
+  public Date getCurrentTime() {
+    return currentTime;
   }
 }
