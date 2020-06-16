@@ -24,6 +24,8 @@ function getComments() {
             const text = document.createElement('card-text')
             text.className('card-text')
 
+            console.log(card)
+
             //Connecting Child
             card.appendChild(header)
             body.appendChild(title)
