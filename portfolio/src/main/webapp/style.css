@@ -55,6 +55,10 @@
   margin-right: auto;
   width: 90%;
 }
+#dropdown {
+    margin: 5px;
+    text-align: right;  
+}
 
 #greeting-container {
   margin-top: 20px;

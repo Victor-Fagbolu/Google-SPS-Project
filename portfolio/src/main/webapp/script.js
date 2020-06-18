@@ -32,8 +32,6 @@ function getComments() {
             Currtime.setAttribute("class","card-time")
             Currtime.innerHTML = time
 
-            console.log(card)
-
             //Connecting Child
             card.appendChild(header)
             body.appendChild(text)
