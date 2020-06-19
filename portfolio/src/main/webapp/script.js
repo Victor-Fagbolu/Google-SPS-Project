@@ -1,8 +1,10 @@
-function test() {
-    console.log("HI")
+function test(e) {
+    console.log(e)
 }
-function getentry() {
-
+function popup() {
+    console.log('show')
+var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
 }
 function getComments() {
     fetch("/data").then((response) => response.json()).then((comments) => {

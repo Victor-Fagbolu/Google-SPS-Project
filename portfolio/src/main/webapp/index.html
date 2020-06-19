@@ -9,6 +9,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
   </head>
+  <style>
+</style>
   <body onload="getComments()">
     <div id="content">
         <div>
@@ -17,25 +19,17 @@
                 <li id="navlist"><a href="aboutme.html">About Me</a></li>
                 <li id="navlist"><a href="gallery.html">Gallery</a></li>
                 <li id="navlist"><a href="blogs.html">Blogs</a></li>
-                <div id = "dropdown" class="dropdown" >
-
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                        <button class="dropdown-item" type="button">Action</button>
-                        <button class="dropdown-item" type="button">Another action</button>
-                        <button class="dropdown-item" type="button">Something else here</button>
-                    </div>
-                </div>
             </ul>
         </div>
 
             <div class="btn-group">
-            <button id="dropdown" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Action
-            </button>
+                <button id="dropdown" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Action
+                </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                    <button class="dropdown-item" type="button">Action</button>
-                    <button class="dropdown-item" type="button">Another action</button>
-                    <button class="dropdown-item" type="button">Something else here</button>
+                    <button class="dropdown-item" type="button" display="block" text-align="right">Action</button>
+                    <button class="dropdown-item" type="button" display="block">Another action</button>
+                    <button class="dropdown-item" type="button" display="inline">Something else here</button>
                 </div>
             </div>
 
@@ -43,9 +37,15 @@
             <h4>Hi, Welcome to Victor's portfolio</h4>
         </div>
         <div id="background">
-            <p>
+            <p class="popup" onmouseover="test(this.innerHTML)" onclick="popup()">
                 Hi, my name is Victor. I'm a rising junior at Prairie View A&M University studying computer
                 science. I'm super excited to be working with everyone.
+                <span class="popuptext" id="myPopup">Translate
+                    <button id="lang" class="btn btn-danger btn-sm">EN</button>
+                    <button id="lang" class="btn btn-danger btn-sm">Spa</button>
+                    <button id="lang" class="btn btn-danger btn-sm">Chi</button>
+                    <button id="lang" class="btn btn-danger btn-sm">Hin</button>
+                </span>
             </p>
         </div>
         <div id="Projects">
@@ -54,7 +54,7 @@
                 <li>Simulation of Lunar Module</li>
                 <li>Tic Tac Toe Ai</li>
                 <li>Motion Detector</li>
-                <li>Interractive Map</li>
+                <li>Interractive Map Using React-Leaflet</li>
             </ul>
         </div>
         <div id="Links">
