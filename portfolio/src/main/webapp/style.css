@@ -87,6 +87,34 @@
   text-align: center;
   padding: 14px 16px;
 }
+#navlist1 a {
+  display: block;
+  color: white;
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+}
+#navlist2 a {
+  display: block;
+  color: white;
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+}
+#navlist3 a {
+  display: block;
+  color: white;
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+}
+#navlist4 a {
+  display: block;
+  color: white;
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+}
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {

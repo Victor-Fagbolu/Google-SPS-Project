@@ -15,60 +15,52 @@
     <div id="content">
         <div>
             <ul id="navbar">
-                <li id="navlist"><a href="index.html">Home</a></li>
-                <li id="navlist"><a href="aboutme.html">About Me</a></li>
-                <li id="navlist"><a href="gallery.html">Gallery</a></li>
-                <li id="navlist"><a href="blogs.html">Blogs</a></li>
+                <li id="navlist"><a id="navlist1" href="index.html">Home</a></li>
+                <li id="navlist"><a id="navlist2" href="aboutme.html">About Me</a></li>
+                <li id="navlist"><a id="navlist3" href="gallery.html">Gallery</a></li>
+                <li id="navlist"><a id="navlist4" href="blogs.html">Blogs</a></li>
             </ul>
         </div>
-
-            <div class="btn-group">
-                <button id="dropdown" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Action
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                    <button class="dropdown-item" type="button" display="block" text-align="right">Action</button>
-                    <button class="dropdown-item" type="button" display="block">Another action</button>
-                    <button class="dropdown-item" type="button" display="inline">Something else here</button>
-                </div>
-            </div>
-
+        <h2 id = "translate">Translate
+            <span>
+                <button class="btn btn-danger btn-sm" onclick="trans('en')">Eng</button>
+                <button class="btn btn-primary btn-sm" onclick="trans('es')">Spa</button>
+                <button class="btn btn-warning btn-sm" onclick="trans('zh')">Chi</button>
+                <button class="btn btn-info btn-sm" onclick="trans('hi')">Hin</button>
+                <button class="btn btn-secondary btn-sm" onclick="trans('ru')">Rus</button>
+            </span>
+        </h2>
         <div id="intro">
-            <h4>Hi, Welcome to Victor's portfolio</h4>
+            <h4 id="index1">Hi, Welcome to Victor's portfolio
+            </h4>
         </div>
         <div id="background">
-            <p class="popup" onmouseover="test(this.innerHTML)" onclick="popup()">
+            <p id="index2">
                 Hi, my name is Victor. I'm a rising junior at Prairie View A&M University studying computer
                 science. I'm super excited to be working with everyone.
-                <span class="popuptext" id="myPopup">Translate
-                    <button id="lang" class="btn btn-danger btn-sm">EN</button>
-                    <button id="lang" class="btn btn-danger btn-sm">Spa</button>
-                    <button id="lang" class="btn btn-danger btn-sm">Chi</button>
-                    <button id="lang" class="btn btn-danger btn-sm">Hin</button>
-                </span>
             </p>
         </div>
         <div id="Projects">
-            <h2>Projects</h2>
+            <h2 id="index3" >Projects</h2>
             <ul>
-                <li>Simulation of Lunar Module</li>
-                <li>Tic Tac Toe Ai</li>
-                <li>Motion Detector</li>
-                <li>Interractive Map Using React-Leaflet</li>
+                <li id="index4">Simulation of Lunar Module</li>
+                <li id="index5">Tic Tac Toe Ai</li>
+                <li id="index6">Motion Detector</li>
+                <li id="index7">Interractive Map Using React-Leaflet</li>
             </ul>
         </div>
         <div id="Links">
-            <h2>Links</h2>
+            <h2 id="index8" >Links</h2>
             <ul>
-                <li><a href="https://www.linkedin.com/in/victor-fagbolu-728aba171/">My LinkedIn</a></li>
-                <li><a href="https://github.com/Victor-Fagbolu">My GitHub</a></li>
-                <li><a href="blogs.html">My Blogs</a></li>
+                <li><a id="index9" href="https://www.linkedin.com/in/victor-fagbolu-728aba171/">My LinkedIn</a></li>
+                <li><a id="index10" href="https://github.com/Victor-Fagbolu">My GitHub</a></li>
+                <li><a id="index11" href="blogs.html">My Blogs</a></li>
             </ul>
         </div>
         <br/><br/><br/>
         <div>
             <div>
-                <h2>Comments</h2>
+                <h2 id="index12">Comments</h2>
                 <div id="commentContainter">
                     <form action="/data" method="POST">
                         <div id="commentAtteributes">

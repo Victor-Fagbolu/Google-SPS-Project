@@ -1,10 +1,59 @@
-function test(e) {
-    console.log(e)
+function fetchResponse(container,code) {
+    const params = new URLSearchParams();
+    params.append('text', container.innerHTML);
+    params.append('languageCode', code);
+
+    fetch('/translate', {
+        method: 'POST',
+        body: params
+    }).then(response => response.text()).then((translatedMessage) => {
+        container.innerText = ''
+        container.innerHTML = translatedMessage;
+    });
 }
-function popup() {
-    console.log('show')
-var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
+function test(a) {
+    console.log(a)
+}
+function trans(code) {
+    //navbar
+    translate = document.getElementById('translate')
+    fetchResponse(translate, code)
+    
+    for(let i = 1; i <= 16; i++) {
+        translate = document.getElementById('navlist'+i)
+        if (translate) {
+            fetchResponse(translate, code)
+        }
+    } 
+    //index
+    for(let i = 1; i <= 12; i++) {
+        translate = document.getElementById('index'+i)
+        if (translate) {
+            fetchResponse(translate, code)
+        }
+    }
+    //gallery
+    for(let i = 1; i <= 6; i++) {
+        translate = document.getElementById('gallery'+i)
+        if (translate) {
+            fetchResponse(translate, code)
+        }
+    } 
+    //blogs
+    for(let i = 1; i <= 6; i++) {
+        translate = document.getElementById('blogs'+i)
+        if (translate) {
+            fetchResponse(translate, code)
+        }
+    } 
+    //aboutMe
+    for(let i = 1; i <= 5; i++) {
+        translate = document.getElementById('aboutme'+i)
+        if (translate) {
+            fetchResponse(translate, code)
+        }
+    } 
+    
 }
 function getComments() {
     fetch("/data").then((response) => response.json()).then((comments) => {
